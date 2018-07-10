@@ -24,10 +24,15 @@
         "prop-types": "15.6.2",
         "react": "16.4.1",
         "react-dom": "16.4.1",
+        "react-hot-loader": "4.3.3",
         "react-router-dom": "4.3.1",
         "styled-components": "3.3.3"
     },
     "devDependencies": {
+        "babel-plugin-import": "1.8.0",
+        "babel-plugin-transform-class-properties": "6.24.1",
+        "babel-preset-env": "1.7.0",
+        "babel-preset-react": "6.24.1",
         "eslint": "4.19.1",
         "eslint-config-airbnb": "17.0.0",
         "eslint-config-prettier": "2.9.0",
@@ -35,6 +40,7 @@
         "eslint-plugin-jsx-a11y": "6.1.0",
         "eslint-plugin-react": "7.10.0",
         "husky": "1.0.0-rc.13",
+        "less": "2.7.3",
         "onchange": "4.0.0",
         "parcel-bundler": "1.9.4",
         "prettier": "1.13.7"
