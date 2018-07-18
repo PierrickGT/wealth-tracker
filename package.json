@@ -13,7 +13,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run format-all && npm run lint"
+            "pre-commit": "npm run format-all && npm run lint && npm run doc"
         }
     },
     "keywords": [],
@@ -37,6 +37,7 @@
         "esdoc": "1.1.0",
         "esdoc-ecmascript-proposal-plugin": "1.0.0",
         "esdoc-jsx-plugin": "1.0.0",
+        "esdoc-plugin-require-coverage": "0.1.2",
         "esdoc-standard-plugin": "1.0.0",
         "eslint": "4.19.1",
         "eslint-config-airbnb": "17.0.0",
