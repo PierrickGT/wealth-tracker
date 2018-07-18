@@ -1,13 +1,14 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 import Layout from './layout';
 
+/**
+ * App Component
+ */
 const App = () => (
-    <h1>
+    <Router>
         <Layout />
-        Hello, world. yeah<br />
-    </h1>
+    </Router>
 );
 
-export default hot(module)(App);
+export default App;
