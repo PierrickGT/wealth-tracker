@@ -4,10 +4,11 @@
     "description": "A simple interface to track my wealth",
     "main": "index.js",
     "scripts": {
+        "doc": "./node_modules/.bin/esdoc",
         "format-all": "./node_modules/.bin/prettier --write **/*.js*",
         "format-watch": "onchange '**/*.js*' -- prettier --write {{changed}}",
-        "lint": "./node_modules/.bin/eslint src/**/*.js*",
-        "start": "parcel src/index.html",
+        "lint": "./node_modules/.bin/eslint --ext .js --ext .jsx src",
+        "start": "parcel --no-cache src/index.html",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "husky": {
@@ -33,6 +34,10 @@
         "babel-plugin-transform-class-properties": "6.24.1",
         "babel-preset-env": "1.7.0",
         "babel-preset-react": "6.24.1",
+        "esdoc": "1.1.0",
+        "esdoc-ecmascript-proposal-plugin": "1.0.0",
+        "esdoc-jsx-plugin": "1.0.0",
+        "esdoc-standard-plugin": "1.0.0",
         "eslint": "4.19.1",
         "eslint-config-airbnb": "17.0.0",
         "eslint-config-prettier": "2.9.0",
