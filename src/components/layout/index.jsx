@@ -9,7 +9,7 @@ import Menu from '../menu';
  * can be nested, and can be placed in any parent container
  * @type {Wrapper}
  */
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 /**
  * Home Component
@@ -43,9 +43,6 @@ const RouterLayout = withRouter(() => (
             <Route exact path="/" component={Home} />
             <Route exact path="/transactions" component={Transactions} />
         </Content>
-        <Footer>
-            <p>Wealth Tracker © 2018</p>
-        </Footer>
     </Layout>
 ));
 
