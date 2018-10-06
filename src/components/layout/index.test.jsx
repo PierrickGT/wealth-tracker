@@ -1,11 +1,17 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { mount } from 'enzyme';
 
-import RouterLayout from ".";
+import Layout from ".";
 
-it('renders correctly', () => {
-  const tree = renderer
-    .create(<RouterLayout />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
+describe('<Layout />', () => {
+    it('should render as a Layout', () => {
+        const wrapper = mount(
+            <Router>
+                <Layout />
+            </Router>
+        )
+
+        expect(wrapper.find('.ant-layout').length).toBe(1);
+    })
+})
