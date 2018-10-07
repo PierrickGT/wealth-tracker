@@ -10,6 +10,7 @@ import App from './components/App';
 // eslint-disable-next-line
 injectGlobal`${globalStyles}`;
 
+/* eslint-disable no-undef */
 render(<App />, root);
 
 if (module.hot) {
