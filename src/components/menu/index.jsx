@@ -30,9 +30,13 @@ export default class HeaderMenu extends Component {
      * @return {State} Return state with the current item active
      */
     handleClick(event) {
-        this.setState({
-            current: event.key
-        });
+        const { current } = this.state;
+
+        if (event.key !== current) {
+            this.setState({
+                current: event.key
+            });
+        }
     }
 
     /**

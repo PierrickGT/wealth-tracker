@@ -1,12 +1,16 @@
-import { Layout } from 'antd';
+import gql from "graphql-tag";
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
-import { rem } from 'polished';
 import styled from 'styled-components';
 
-import Menu from '../menu';
-import { spacingUnit } from '../../styles/variables';
+import { Layout } from 'antd';
+import { Query } from "react-apollo";
+import { rem } from 'polished';
+import { Route, withRouter } from 'react-router-dom';
+
 import * as fonts from '../../styles/fonts';
+import { spacingUnit } from '../../styles/variables';
+
+import Menu from '../menu';
 
 /**
  * Layout wrapper, in which Header, Sider, Content, Footer or Layout itself
@@ -71,9 +75,36 @@ function Home() {
  */
 function Transactions() {
     return (
-        <div>
-            <h2>Transactions</h2>
-        </div>
+        <Query
+          query={gql`
+              {
+                transactions(page: 1, limit: 25) {
+              	docs {
+              		id
+              		date
+              		description
+              		account
+              		amount
+              		category
+              		sub_category
+              	},
+              	pages,
+              	total
+                }
+              }
+          `}
+        >
+            {({ loading, error, data }) => {
+                if (loading) return <p>Loading...</p>;
+                if (error) return <p>Error :(</p>;
+
+                    return data.transactions.docs.map(transaction => (
+                        <div key={transaction.id}>
+                            <p>{transaction.amount}</p>
+                        </div>
+                    ));
+                }}
+        </Query>
     )
 }
 

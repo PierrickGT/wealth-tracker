@@ -1,11 +1,11 @@
-{
-    "env": {
-        "production": {
-            "presets": [
-                "react",
-                "env"
+module.exports = {
+    env: {
+        production: {
+            presets: [
+                "@babel/preset-react",
+                "@babel/preset-env"
             ],
-            "plugins": [
+            plugins: [
                 "react-hot-loader/babel",
                 "styled-components",
                 "transform-class-properties",
@@ -19,12 +19,12 @@
                 ]
             ]
         },
-        "test": {
-            "presets": [
-                "react",
-                "env"
+        test: {
+            presets: [
+                "@babel/preset-react",
+                "@babel/preset-env"
             ],
-            "plugins": [
+            plugins: [
                 ["istanbul", {
                   "exclude": [
                     "src/**/*.test.{js,jsx}",

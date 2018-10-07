@@ -9,7 +9,7 @@
     "format-watch": "onchange '**/*.js*' -- prettier --write {{changed}}",
     "lint": "./node_modules/.bin/eslint --ext .js --ext .jsx src",
     "start": "parcel --no-cache src/index.html",
-    "test": "snyk test && jest --colors --coverage",
+    "test": "jest --colors --coverage",
     "test:watch": "jest --colors --coverage --watch",
     "update": "updtr --exclude less --save exact"
   },
@@ -23,26 +23,34 @@
   "license": "ISC",
   "dependencies": {
     "antd": "^3.10.0",
+    "apollo-boost": "^0.1.16",
+    "apollo-cache-inmemory": "^1.2.10",
     "babel-plugin-styled-components": "^1.8.0",
     "bizcharts": "^3.2.4",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
     "polished": "^2.2.0",
     "prop-types": "15.6.2",
     "react": "^16.5.2",
+    "react-apollo": "^2.2.4",
     "react-dom": "^16.5.2",
     "react-hot-loader": "^4.3.11",
     "react-router-dom": "4.3.1",
-    "styled-components": "^3.4.9"
+    "styled-components": "^3.4.9",
+    "unstated": "^2.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
     "ajv": "^6.5.4",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-plugin-import": "^1.9.1",
     "babel-plugin-istanbul": "5.0.1",
     "babel-plugin-transform-class-properties": "6.24.1",
-    "babel-preset-env": "1.7.0",
-    "babel-preset-react": "6.24.1",
     "esdoc": "1.1.0",
     "esdoc-ecmascript-proposal-plugin": "1.0.0",
     "esdoc-jsx-plugin": "1.0.0",
@@ -62,6 +70,7 @@
     "prettier": "^1.14.3",
     "react-router-test-context": "0.1.0",
     "react-test-renderer": "^16.5.2",
+    "regenerator-runtime": "^0.12.1",
     "snyk": "^1.100.2"
   }
 }
