@@ -1,30 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import createRouterContext from 'react-router-test-context'
 import { shallow } from 'enzyme';
 
-import HeaderMenu from ".";
+import { HeaderMenu } from '.';
 
 describe('<Menu />', () => {
     HeaderMenu.contextTypes = {
         router: PropTypes.shape({})
-    }
+    };
 
     it('should display home tab by default', () => {
-        const context = createRouterContext()
-        const wrapper = shallow(<HeaderMenu />, { context })
+        const wrapper = shallow(<HeaderMenu location={{ pathname: '/' }} />);
         const { current } = wrapper.state();
 
-        expect(current).toBe('home');
-    })
+        expect(current).toBe('/');
+    });
 
     it('should display transactions tab', () => {
-        const context = createRouterContext()
-        const spy = jest.fn();
-        const wrapper = shallow(<HeaderMenu onClick={spy} />, { context });
+        const wrapper = shallow(
+            <HeaderMenu location={{ pathname: '/transactions' }} />
+        );
+        const { current } = wrapper.state();
 
-        expect(wrapper.state('current')).toBe('home');
-        wrapper.simulate('click', { key: 'transactions' })
-        expect(wrapper.state('current')).toBe('transactions');
-    })
-})
+        expect(current).toBe('/transactions');
+    });
+
+    it('should call handleClick function', () => {
+        const spy = jest.spyOn(HeaderMenu.prototype, 'handleClick');
+        const wrapper = shallow(
+            <HeaderMenu location={{ pathname: '/' }} onClick={spy} />
+        );
+
+        wrapper.instance().handleClick({ key: '/transactions' });
+        expect(spy).toHaveBeenCalled();
+    });
+});

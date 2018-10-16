@@ -1,38 +1,32 @@
 module.exports = {
     env: {
         production: {
-            presets: [
-                "@babel/preset-react",
-                "@babel/preset-env"
-            ],
+            presets: ['@babel/preset-react', '@babel/preset-env'],
             plugins: [
-                "react-hot-loader/babel",
-                "styled-components",
-                "transform-class-properties",
+                'react-hot-loader/babel',
+                'styled-components',
+                '@babel/plugin-proposal-class-properties',
                 [
-                    "import",
+                    'import',
                     {
-                        "libraryName": "antd",
-                        "libraryDirectory": "es",
-                        "style": true
+                        libraryName: 'antd',
+                        libraryDirectory: 'es',
+                        style: true
                     }
                 ]
             ]
         },
         test: {
-            presets: [
-                "@babel/preset-react",
-                "@babel/preset-env"
-            ],
+            presets: ['@babel/preset-react', '@babel/preset-env'],
             plugins: [
-                ["istanbul", {
-                  "exclude": [
-                    "src/**/*.test.{js,jsx}",
-                    "setupJest.js"
-                  ]
-                }],
-                "transform-class-properties"
+                [
+                    'istanbul',
+                    {
+                        exclude: ['src/**/*.test.{js,jsx}', 'setupJest.js']
+                    }
+                ],
+                '@babel/plugin-proposal-class-properties'
             ]
         }
     }
-}
+};
