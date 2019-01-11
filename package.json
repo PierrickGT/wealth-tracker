@@ -9,7 +9,7 @@
     "format-watch": "onchange '**/*.js*' -- prettier --write {{changed}}",
     "lint": "./node_modules/.bin/eslint --ext .js --ext .jsx src",
     "start": "parcel --no-cache src/index.html",
-    "test": "jest --colors --coverage",
+    "test": "npm run format-all && npm run lint && jest --colors --coverage",
     "test:watch": "jest --colors --coverage --watch",
     "update": "updtr --exclude less -t 'npm run format-all && npm run lint && npm test'"
   },
