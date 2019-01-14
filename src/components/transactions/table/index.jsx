@@ -1,10 +1,13 @@
 import moment from 'moment';
+import { rem } from 'polished';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { Table, Tag } from 'antd';
 import { filter, groupBy, matches } from 'lodash';
+
+import { spacingUnit } from '../../../styles/variables';
 
 /**
  * Component used to render transactions table
@@ -19,8 +22,10 @@ export default class TransactionsTable extends Component {
         super(props);
 
         const StyledAmount = styled.span`
-            font-weight: bold;
-            text-transform: capitalize;
+            background-color: ${styledProps => styledProps.amount.startsWith('-') ? '#fce3e8' : '#e1faee'};
+            color: ${styledProps => styledProps.amount.startsWith('-') ? '#ef0731' : '#13c26f'};
+            padding: ${rem('4px')} ${spacingUnit(1)};
+            border-radius: ${rem('4px')};
         `;
 
         const StyledDate = styled.span`
@@ -89,7 +94,7 @@ export default class TransactionsTable extends Component {
                 dataIndex: 'amount',
                 key: 'amount',
                 render: amount => (
-                    <StyledAmount>
+                    <StyledAmount amount={amount.toString()}>
                         {amount
                             .toLocaleString('fr-FR', {
                                 style: 'currency',
@@ -175,23 +180,33 @@ export default class TransactionsTable extends Component {
                 }
             }
 
-            .ant-table-expanded-row {
+            tr.ant-table-expanded-row {
                 > td {
                     padding: 0 !important;
 
                     &:first-child {
                         display: none;
                     }
+
+                    .ant-table-wrapper {
+                        margin: 0;
+                    }
                 }
             }
 
-            .ant-table-row,
-            .ant-table-expanded-row {
+            tr.ant-table-row,
+            tr.ant-table-expanded-row {
                 &:hover {
                     > td {
                         background-color: inherit;
                     }
                 }
+            }
+
+            .ant-pagination-item-link {
+                align-items: center;
+                display: flex;
+                height: 100%;
             }
         `;
 

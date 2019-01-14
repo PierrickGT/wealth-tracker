@@ -10,7 +10,7 @@
         {
             "name": "esdoc-plugin-require-coverage",
             "option": {
-                "required": 100
+                "required": 35
             }
         }
     ]
