@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A simple interface to track my wealth",
   "main": "index.js",
+  "engines": {
+      "node": ">=10.0.0",
+      "npm": ">=6.0.0"
+  },
   "scripts": {
     "doc": "./node_modules/.bin/esdoc",
     "format-all": "./node_modules/.bin/prettier --write **/*.js*",
