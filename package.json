@@ -27,7 +27,7 @@
   "license": "ISC",
   "dependencies": {
     "antd": "^3.12.3",
-    "apollo-boost": "^0.1.16",
+    "apollo-boost": "^0.1.24",
     "apollo-cache-inmemory": "^1.2.10",
     "babel-plugin-styled-components": "1.10.0",
     "bizcharts": "^3.2.4",
