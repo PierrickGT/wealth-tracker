@@ -28,7 +28,7 @@
   "dependencies": {
     "antd": "^3.12.4",
     "apollo-boost": "^0.1.27",
-    "apollo-cache-inmemory": "^1.2.10",
+    "apollo-cache-inmemory": "^1.4.2",
     "babel-plugin-styled-components": "1.10.0",
     "bizcharts": "^3.2.4",
     "enzyme": "^3.7.0",
