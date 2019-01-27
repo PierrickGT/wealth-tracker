@@ -4,10 +4,11 @@
   "description": "A simple interface to track my wealth",
   "main": "index.js",
   "engines": {
-      "node": ">=10.0.0",
-      "npm": ">=6.0.0"
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
   },
   "scripts": {
+    "codecov": "./node_modules/.bin/codecov",
     "doc": "./node_modules/.bin/esdoc",
     "format-all": "./node_modules/.bin/prettier --write **/*.js*",
     "format-watch": "onchange '**/*.js*' -- prettier --write {{changed}}",
@@ -19,7 +20,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format-all && npm run lint && npm run doc && npm test"
+      "pre-commit": "npm test"
     }
   },
   "keywords": [],
@@ -60,6 +61,7 @@
     "babel-plugin-import": "^1.9.1",
     "babel-plugin-istanbul": "^5.0.1",
     "babel-plugin-transform-class-properties": "6.24.1",
+    "codecov": "^3.1.0",
     "esdoc": "1.1.0",
     "esdoc-ecmascript-proposal-plugin": "1.0.0",
     "esdoc-jsx-plugin": "1.0.0",
