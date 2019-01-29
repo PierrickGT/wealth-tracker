@@ -41,7 +41,7 @@
     "polished": "^2.2.0",
     "prop-types": "15.6.2",
     "react": "^16.5.2",
-    "react-apollo": "^2.4.0",
+    "react-apollo": "^2.4.1",
     "react-dom": "^16.5.2",
     "react-hot-loader": "^4.3.11",
     "react-router": "^4.3.1",
