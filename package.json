@@ -4,7 +4,7 @@
   "description": "A simple interface to track my wealth",
   "main": "index.js",
   "engines": {
-    "node": ">=10.0.0",
+    "node": ">=11.0.0",
     "npm": ">=6.0.0"
   },
   "scripts": {
