@@ -61,7 +61,7 @@
     "babel-plugin-import": "^1.9.1",
     "babel-plugin-istanbul": "^5.1.4",
     "babel-plugin-transform-class-properties": "6.24.1",
-    "codecov": "^3.3.0",
+    "codecov": "^3.4.0",
     "esdoc": "1.1.0",
     "esdoc-ecmascript-proposal-plugin": "1.0.0",
     "esdoc-jsx-plugin": "1.0.0",
