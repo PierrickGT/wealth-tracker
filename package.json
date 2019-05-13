@@ -33,7 +33,7 @@
     "babel-plugin-styled-components": "1.10.0",
     "bizcharts": "^3.5.2",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-adapter-react-16": "^1.13.0",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1",
     "lodash": "^4.17.11",
