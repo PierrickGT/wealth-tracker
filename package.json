@@ -78,7 +78,7 @@
     "less": "2.7.3",
     "onchange": "^5.0.2",
     "parcel-bundler": "^1.12.3",
-    "prettier": "^1.17.0",
+    "prettier": "^1.17.1",
     "react-router-test-context": "0.1.0",
     "react-test-renderer": "^16.8.6",
     "regenerator-runtime": "0.13.2",
