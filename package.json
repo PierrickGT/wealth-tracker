@@ -31,7 +31,7 @@
     "apollo-boost": "^0.4.2",
     "apollo-cache-inmemory": "^1.6.2",
     "babel-plugin-styled-components": "1.10.1",
-    "bizcharts": "^3.5.3",
+    "bizcharts": "^3.5.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "graphql": "^14.3.1",
