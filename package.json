@@ -16,7 +16,9 @@
     "start": "parcel --no-cache src/index.html",
     "test": "npm run format-all && npm run lint && jest --colors --coverage",
     "test:watch": "jest --colors --coverage --watch",
-    "update": "updtr --exclude less -t 'npm run format-all && npm run lint && npm test'"
+    "update": "updtr --exclude less -t 'npm run format-all && npm run lint && npm test'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -47,7 +49,8 @@
     "react-router": "^5.0.1",
     "react-router-dom": "5.0.1",
     "styled-components": "4.3.1",
-    "unstated": "^2.1.1"
+    "unstated": "^2.1.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -81,7 +84,7 @@
     "prettier": "^1.18.2",
     "react-router-test-context": "0.1.0",
     "react-test-renderer": "^16.8.6",
-    "regenerator-runtime": "0.13.2",
-    "snyk": "^1.179.0"
-  }
+    "regenerator-runtime": "0.13.2"
+  },
+  "snyk": true
 }
