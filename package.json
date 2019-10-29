@@ -82,6 +82,6 @@
     "react-router-test-context": "0.1.0",
     "react-test-renderer": "^16.8.6",
     "regenerator-runtime": "0.13.2",
-    "snyk": "^1.179.0"
+    "snyk": "^1.239.3"
   }
 }
