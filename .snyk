@@ -1,4 +1,34 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.14.1
 ignore: {}
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - antd > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - babel-plugin-styled-components > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - react-hot-loader > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - antd > rc-form > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - antd > rc-steps > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - antd > rc-table > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - antd > rc-tabs > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - styled-components > babel-plugin-styled-components > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - enzyme > cheerio > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - antd > rc-editor-mention > rc-editor-core > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - babel-plugin-styled-components > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - styled-components > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
+    - styled-components > babel-plugin-styled-components > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-05-01T03:36:27.075Z'
